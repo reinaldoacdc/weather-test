@@ -18,7 +18,7 @@ class Forecast extends React.Component {
 
   componentDidMount(){
     let getWeather = async() => {
-      let res = await axios.get(`http://my-api-weather.herokuapp.com/forecast/${this.props.city}`);
+      let res = await axios.get(`https://my-api-weather.herokuapp.com/forecast/${this.props.city}`);
       this.setState({weather: res.data })
     }
     getWeather();
