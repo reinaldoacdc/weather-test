@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Forecast from './components/Forecast'
 import Autocomplete from 'react-google-autocomplete';
+import Historic from './components/Historic'
 
 function App() {
   return (
@@ -20,9 +21,11 @@ function App() {
     componentRestrictions={{country: "br"}}
 />
       </header>
-      
+      <button onClick={() => { ReactDOM.render(<Historic />, document.getElementById('historic') ) }} > Exibir Historico</button>
+
       <div id="forecast"></div> 
       <div id='daily'></div>
+      <div id='historic'></div>
     </div>
   );
 }

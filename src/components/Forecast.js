@@ -6,14 +6,8 @@ import React from 'react';
 class Forecast extends React.Component {
   
   constructor(props) {
-    super(props);
-    console.log('create')
+    super(props);    
     this.state = {city: this.props.city, weather: {}};
-  }
-
-
-  componentDidUpdate(){
-    console.log('update');
   }
 
   componentDidMount(){
@@ -25,8 +19,6 @@ class Forecast extends React.Component {
   }
 
     render() {
-      console.log('render')
-      console.log(this.state.weather)
       const items = [];
       if (Object.keys(this.state.weather).length > 0){
         this.state.weather['list'].map(function(daily, i){
