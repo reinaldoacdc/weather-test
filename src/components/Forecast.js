@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom'
 import Daily from './Daily'
 import axios from 'axios';
 import React from 'react';
+import './Forecast.css'
 
 class Forecast extends React.Component {
   
@@ -27,9 +28,8 @@ class Forecast extends React.Component {
           items.push(
             <tr>
               <td> {daily.date}  </td>
-              <td> {daily.temp_min} </td>
-              <td> {daily.temp_max} </td>
-              <td> {daily.description} </td>
+              <td> {daily.temp_min}ºC  </td>
+              <td> {daily.temp_max}ºC </td>
               <td> <button onClick={() => { ReactDOM.render(<Daily data={daily} />, document.getElementById('daily') ) }} > Detalhes</button> </td>
             </tr>
           )

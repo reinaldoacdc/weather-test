@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1> Previsão do Tempo</h1>
          
         <Autocomplete
     style={{width: '50%'}}
@@ -20,9 +20,10 @@ function App() {
     types={['(cities)']}
     componentRestrictions={{country: "br"}}
 />
-      </header>
-      <button onClick={() => { ReactDOM.render(<Historic />, document.getElementById('historic') ) }} > Exibir Historico</button>
 
+        <button onClick={() => { ReactDOM.render(<Historic />, document.getElementById('historic') ) }} > Exibir Historico</button>
+
+      </header>
       <div id="forecast"></div> 
       <div id='daily'></div>
       <div id='historic'></div>
