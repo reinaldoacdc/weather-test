@@ -14,6 +14,7 @@ function App() {
         <Autocomplete
     style={{width: '50%'}}
     onPlaceSelected={(place) => {
+      ReactDOM.unmountComponentAtNode(document.getElementById('daily'))
       ReactDOM.unmountComponentAtNode(document.getElementById('forecast'))
       ReactDOM.render(<Forecast city= {place.formatted_address} />, document.getElementById('forecast'));                        
     }}
@@ -21,7 +22,9 @@ function App() {
     componentRestrictions={{country: "br"}}
 />
 
-        <button onClick={() => { ReactDOM.render(<Historic />, document.getElementById('historic') ) }} > Exibir Historico</button>
+        <button onClick={() => { 
+          ReactDOM.unmountComponentAtNode(document.getElementById('historic'))
+          ReactDOM.render(<Historic />, document.getElementById('historic') ) }} > Exibir Historico</button>
 
       </header>
       <div id="forecast"></div> 

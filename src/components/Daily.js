@@ -12,7 +12,7 @@ class Daily extends React.Component {
             <p> Máxima: {this.props.data.temp_max}ºC </p>
             <p> Descrição: {this.props.data.description} </p>
             <p> Pressão: {this.props.data.pressure}hPa </p>
-            <p> Humidade: {this.props.data.humidity}(%)) </p>
+            <p> Humidade: {this.props.data.humidity}(%) </p>
             
           </div>
         )
